@@ -1,0 +1,464 @@
+/* Reset stylów dla wszystkich elementów */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stylowanie podstawowe dla całej strony */
+html, body {
+    background-color: rgb(240, 240, 240);
+    font-family: "Montserrat";
+}
+
+/* Stylowanie nagłówka, z jego położeniem, kolorem i efektami przejścia */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 70px;
+    background-color: #102E44;
+    padding: 0 15px;
+    z-index: 1000;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Stylowanie ukrywania nagłówka przy przewijaniu w dół */
+header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Stylowanie głównego obszaru treści */
+main {
+    padding: 20px;
+    min-height: 700px;
+    margin-top: 60px; /* Dostosowanie do wysokości nagłówka */
+    text-align: center;
+}
+
+/* Stylowanie sekcji głównej z informacjami o produkcie */
+.product-info-section-main .section-title-main {
+    font-size: 24px; /* Wielkość czcionki dla h5 */
+    font-weight: 700; /* Opcjonalnie: pogrubienie czcionki */
+    color: #102E44; /* Kolor czcionki */
+    margin-bottom: 10px;
+}
+
+.product-info-section-main h1 {
+    font-size: 46px; /* Wielkość czcionki dla h1 */
+    font-weight: 800; /* Opcjonalnie: pogrubienie czcionki */
+    color: #102E44; /* Kolor czcionki */
+}
+
+/* Stylowanie zdjęcia produktu */
+.product-image-main {
+    max-width: 100%; /* Zdjęcie dostosowuje się do szerokości kontenera */
+    height: auto; /* Zachowanie proporcji zdjęcia */
+    display: block;
+    margin: 20px auto; /* Centrowanie zdjęcia z marginesem */
+    border-radius: 10px; /* Opcjonalnie: zaokrąglenie rogów zdjęcia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcjonalnie: dodanie cienia */
+}
+
+/* Stylowanie linii <hr> w sekcji informacji o produkcie */
+.product-info-section-main .custom-hr-main {
+    border: none;
+    border-top: 1px solid #102E44;
+    opacity: 1;
+    width: 100%;
+    margin: 20px 0;
+}
+/* Ukrywanie sekcji na początku */
+.hidden-main {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Przejście między stanami */
+.content-main {
+    transition: max-height 0.3s ease-out;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trzy kolumny */
+    gap: 10px; /* Odstępy między elementami */
+
+}
+
+/* Stylizacja dla każdego elementu danych */
+.content-main p {
+    background-color: #fafafa; /* Tło dla każdego elementu */
+    padding: 8px; /* Odstęp wewnętrzny */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    margin: 0; /* Brak marginesów między elementami */
+}
+
+/* Opcjonalnie: stylizacja nagłówków w elementach danych */
+.content-main p strong {
+    display: block; /* Blokowy element */
+    margin-top: 5px; /* Odstęp poniżej nagłówka */
+    color: #102E44; /* Kolor nagłówka */
+}
+/* Stylizacja dla przycisku z tekstem i strzałką */
+.toggle-button-main {
+    font-size: 18px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: #102E44; /* Kolor tekstu */
+    background: none; /* Brak tła */
+    border: none; /* Brak obramowania */
+    cursor: pointer; /* Kursor w formie ręki */
+    display: flex; /* Flexbox do ustawienia treści */
+    align-items: center; /* Wyrównanie pionowe */
+    justify-content: space-between; /* Rozstawienie elementów na całej szerokości */
+    width: 100%; /* Przyciski na pełną szerokość kontenera */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+.toggle-button-main:hover, .toggle-button-main.active {
+    color: #00497e; /* Kolor tekstu przy najechaniu lub aktywności */
+}
+
+.hidden-main {
+    display: none; /* Chowa treść, gdy klasa jest aktywna */
+}
+
+/* Stylizacja strzałki */
+.toggle-button-main i {
+    transition: transform 0.3s ease; /* Płynna zmiana obrotu strzałki */
+    font-size: 14px; /* Rozmiar ikony */
+    color: #102E44; /* Kolor strzałki */
+}
+
+/* Strzałka obrócona w dół, gdy sekcja jest rozwinięta */
+.toggle-button-main.active i {
+    transform: rotate(180deg); /* Obrót strzałki */
+    color: #102E44; /* Kolor strzałki */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Stylizacja dla elementu załącznika */
+.attachment-item {
+    display: flex;
+    align-items: flex-start; /* Dopasowanie do górnej krawędzi */
+    margin-top: 10px;
+}
+
+/* Ikona pliku */
+.attachment-item .fa-file-alt {
+    font-size: 40px; /* Rozmiar ikony */
+    color: #102E44; /* Kolor ikony */
+    margin-right: 10px; /* Odstęp między ikoną a szczegółami załącznika */
+}
+
+/* Szczegóły załącznika */
+.attachment-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Wyrównanie do lewej strony */
+}
+
+/* Stylizacja nazwy załącznika */
+.attachment-name {
+    font-size: 16px;
+    color: #102E44;
+    text-decoration: none; /* Usunięcie podkreślenia */
+    margin-bottom: 4px;
+    display: block;
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+.attachment-name:hover {
+    color: #00497e; /* Zmiana koloru podczas najechania myszką */
+}
+
+/* Stylizacja rozmiaru załącznika */
+.attachment-size {
+    font-size: 14px;
+    color: #666;
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stylowanie logotypu */
+.logo {
+    height: 40px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Stylowanie kolumn - podstawowa struktura layoutu */
+.col {
+    flex: 1;
+}
+
+/* Centrowanie treści w kolumnie */
+.col-12.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stylowanie menu rozwijanego języka */
+.language-dropdown {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Stylowanie opcji językowych */
+.language-option {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #102E44;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Stylowanie aktywnej opcji językowej */
+.language-option.selected {
+    padding: 5px 15px;
+}
+
+/* Stylowanie efektu hover dla nieaktywnych opcji językowych */
+.language-option:not(.selected):hover {
+    background-color: #16425f;
+}
+
+/* Stylowanie kontenera opcji językowych */
+.language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Wyświetlanie opcji językowych w rozwijanym menu */
+.language-dropdown.open .language-options {
+    display: block;
+}
+
+/* Stylowanie flag w rozwijanym menu */
+.lang-flag {
+    width: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Stylowanie ikony rozwijania w dół */
+.fa-chevron-down {
+    margin-left: auto;
+}
+
+/* Stylowanie stopki z gradientem tła */
+footer {
+    background-image: linear-gradient(rgba(16, 46, 68, 0.8), rgba(16, 46, 68, 0.8)), url('../images/gabit.png');
+    /* background-size: cover; */
+    background-position: center;
+}
+
+/* Stylowanie tekstów w stopce */
+.footer-text {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Stylowanie linków w stopce */
+.footer-text a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Stylowanie hover dla linków w stopce */
+.col-md-2 .footer-text a:hover,
+.col-md-2 .footer-text a:focus {
+    color: #aaf4ff !important;
+}
+
+/* Stylowanie ikon w stopce */
+.footer-text i {
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Stylowanie nagłówków w stopce */
+.footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stylowanie linii pod nagłówkami w stopce */
+.footer-heading hr {
+    width: 50px;
+    background-color: #7c4dff;
+    border: none;
+    height: 2px;
+    margin: 10px 0;
+}
+
+/* Responsywność dla elementów tekstowych */
+.responsive-text {
+    display: block;
+}
+
+/* Stylowanie ikon mediów społecznościowych w stopce */
+.fa-facebook-f, .fa-instagram, .fa-linkedin, .fa-youtube {
+    font-size: 30px;
+}
+
+/* Stylowanie ikony strzałki, domyślnie ukryte na większych ekranach */
+.footer-heading .arrow-icon {
+    display: none;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+    .footer-text i {
+        display: none; /* Ukrywa ikony w zakresie szerokości od 768px do 1200px */
+    }
+    .footer-text {
+        font-size: 14px !important;
+    }
+    .content-main {
+        grid-template-columns: repeat(2, 1fr); /* Dwie kolumny */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-main {
+        grid-template-columns: 1fr; /* Jedna kolumna */
+    }
+    .footer-heading .arrow-icon {
+        display: inline-block; /* Pokaż ikonę tylko na małych ekranach */
+        transition: transform 0.3s ease; /* Animacja obrotu */
+    }
+
+    .footer-heading.collapsible.active .arrow-icon {
+        transform: rotate(180deg); /* Obrót ikony, gdy sekcja jest rozwinięta */
+    }
+    .lang-flag {
+        width: 30px;
+    }
+    .col-4:first-child { 
+        display: none;
+    }
+    .footer-heading {
+        position: relative;
+        text-align: center;
+        padding-bottom: 8px;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-left: 15px;
+        margin-right: 15px;;
+    }
+    
+    .footer-heading::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+    .col-md-4.col-lg-3.col-xl-3 .footer-heading::after {
+        display: none;
+    }
+    
+
+    .collapsible.active {
+        color: #aaf4ff;
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-left: 15px;
+    }
+    .language-dropdown {
+        width: 100%;
+    }
+    header {
+        min-height: 60px;
+        padding: 0;
+    }
+    .responsive-text {
+        display: none;
+    }
+    .d-flex.justify-content-between>div:last-child {
+        flex: 1;
+        justify-content: center;
+        display: flex;
+    }
+    .d-flex.justify-content-between {
+        justify-content: center !important;
+    }
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        text-align: left;
+        padding-left: 15px;
+    }
+    .content.active {
+        max-height: 500px;
+    }
+    .footer-text {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-linkedin, .fa-youtube {
+        font-size: 30px; 
+    }
+
+    .fa-instagram, .fa-linkedin, .fa-youtube {
+        margin-left: 20px; 
+    }
+}

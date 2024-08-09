@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <!-- Sekcja główki strony, zawiera metadane, linki do arkuszy stylów i skryptów -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabit QR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Dowiedz się więcej o Gabit, ofertach specjalnych i nowościach.">
+  <meta name="keywords" content="Gabit, oferta, nowości, kontakt">
+</head>
+
+<body>
+  <!-- Nagłówek strony z logo i menu wyboru języka -->
+  <header id="header" class="text-white d-flex justify-content-center fixed-top py-2" style="background-color: #102E44;">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-4">
+          <!-- Pusta kolumna po lewej stronie dla zachowania symetrii -->
+        </div>
+        <div class="col-4 text-center">
+          <!-- Kolumna z logo -->
+          <a href="index.html"><img src="images/logo.svg" alt="Logo" class="logo"></a>
+        </div>
+        <div class="col-4 text-right">
+          <!-- Kolumna z dropdownem językowym -->
+          <div class="language-dropdown">
+            <div class="language-option selected" onclick="toggleDropdown()">
+              <img src="images/pl.svg" alt="Polski" class="lang-flag">
+              <span></span>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="language-options">
+              <div class="language-option" onclick="setLanguage('pl')">
+                <img src="images/pl.svg" alt="Polski" class="lang-flag">PL
+              </div>
+              <div class="language-option" onclick="setLanguage('en')">
+                <img src="images/gb.svg" alt="English" class="lang-flag">EN
+              </div>
+              <div class="language-option" onclick="setLanguage('de')">
+                <img src="images/de.svg" alt="Deutsch" class="lang-flag">DE
+              </div>
+              <div class="language-option" onclick="setLanguage('fr')">
+                <img src="images/fr.svg" alt="Français" class="lang-flag">FR
+              </div>
+              <div class="language-option" onclick="setLanguage('it')">
+                <img src="images/it.svg" alt="Italiano" class="lang-flag">IT
+              </div>
+              <div class="language-option" onclick="setLanguage('nl')">
+                <img src="images/nl.svg" alt="Nederlands" class="lang-flag">NL
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Główna sekcja strony, zawartość strony -->
+ <main>
+  <section class="product-info-section-main">
+    <div class="container-main">
+      <h2 class="section-title-main" data-translate="product_info">Informacje o produkcie</h2>
+      <h1 class="product-title-main" data-translate="window">OKNO</h1>
+      <img src="images/okno_tymczasowe.png" alt="Zdjęcie produktu" class="product-image-main">
+      <hr class="custom-hr-main">
+
+      <!-- Pierwszy div z przyciskiem -->
+      <div class="toggle-section-main">
+        <button class="toggle-button-main" onclick="toggleContent('content1')"> <span data-translate="technical_data"> Dane techniczne</span><i class="fa fa-chevron-down"></i></button>
+        <div id="content1" class="content-main hidden-main">
+          <p><strong data-translate="name">Nazwa:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="frame_material">Materiał ramy okna:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="inner_frame_color">Kolor ramy wewnętrznej:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="outer_frame_color">Kolor ramy zewnętrznej:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="window_width">Szerokość okna:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="window_height">Wysokość okna:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="hardware_type">Typ okucia:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="window_weight">Waga okna:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="production_date">Data produkcji:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="gasket_type">Rodzaj uszczelki:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="glass_thickness">Grubość szkła:</strong> <span class="editable-content-main">-</span></p>
+          <p><strong data-translate="frame_reinforcement">Rodzaj zbrojenia ramy:</strong> <span class="editable-content-main">-</span></p>
+        </div>
+      </div>
+
+      <hr class="custom-hr-main">
+      
+      <!-- Drugi div z przyciskiem -->
+      <div class="toggle-section-main">
+        <button class="toggle-button-main" onclick="toggleContent('content2')"><span data-translate="documentation"> Dokumentacja </span><i class="fa fa-chevron-down"></i></button>
+        <div id="content2" class="content-main hidden-main">
+          <!-- Miejsce na załączniki -->
+          <div id="attachments">
+            <!-- Załączniki zostaną dodane dynamicznie przez JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Stopka strony z informacjami kontaktowymi i linkami do mediów społecznościowych -->
+  <footer class="text-center text-lg-start text-white" style="background-color: #102E44">
+    <section class="d-flex justify-content-between p-3" style="background-color: #102E44;">
+      <div class="me-5">
+        <!-- Sekcja zachęcająca do śledzenia firmy -->
+        <span class="responsive-text" data-translate="join_us">Bądź z nami na bieżąco</span>
+      </div>
+      <div>
+        <!-- Linki do mediów społecznościowych -->
+        <a href="https://www.facebook.com/GABIT.okna/" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/gabit_eu/?hl=pl" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/gabit-bytow/" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCgZq4QaLwq3E7Z9cyYBpL9A" class="text-white me-4">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container text-center text-md-start mt-4">
+        <div class="row mt-3">
+          <!-- Informacje o firmie i ofercie -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
+            <h6 class="footer-heading collapsible" data-target="about-us"><span data-translate="about_us">O Nas</span> <i class="fa fa-chevron-down arrow-icon"></i></h6>
+            <div class="content">
+              <p class="footer-text">
+                <span data-translate="description">Nasza rodzinna firma, założona w 1976 roku, zatrudnia ponad 200 osób i jest rozpoznawalna w niemal całej Europie. Od początku skupiamy się na rozwoju i ekspansji rynkowej. Zarządzamy z pasją, dążąc do zadowolenia klientów z naszych produktów stolarki okienno-drzwiowej. W pracy koncentrujemy się na ciągłym doskonaleniu rozwiązań, reagując na potrzeby rynku.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+            <!-- Lista ofert -->
+            <h6 class="footer-heading collapsible" data-target="products"><span data-translate="products">OFERTA</span><i class="fa fa-chevron-down arrow-icon"></i></h6>
+            <div class="content">
+              <p class="footer-text"><i class="fab fa-windows"></i> <a href="https://gabit.eu/okna/" class="text-white" data-translate="windows"> OKNA</a></p>
+              <p class="footer-text"><i class="fas fa-door-closed"></i><a href="https://gabit.eu/drzwi/" class="text-white" data-translate="doors"> DRZWI</a></p>
+              <p class="footer-text"><i class="fas fa-layer-group"></i><a href="https://gabit.eu/systemy-przesuwne/" class="text-white" data-translate="sliding_systems"> PRZESUWNE</a></p>
+              <p class="footer-text"><i class="fas fa-window-restore"></i><a href="https://gabit.eu/fasady/" class="text-white" data-translate="facades"> FASADY</a></p>
+              <p class="footer-text"><i class="fas fa-fire-alt"></i><a href="https://gabit.eu/przeciw-pozarowe/" class="text-white" data-translate="fire_systems"> SYSTEMY PPOŻ.</a></p>
+              <p class="footer-text"><i class="fas fa-scroll"></i><a href="https://gabit.eu/rolety/" class="text-white" data-translate="shutters"> ROLETY</a></p>
+              <p class="footer-text"><i class="fas fa-th-large"></i><a href="https://gabit.eu/balkony-francuskie/" class="text-white" data-translate="french_balconies"> BALKONY</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+            <!-- Godziny otwarcia -->
+            <h6 class="footer-heading collapsible" data-target="opening_hours"><span data-translate="opening_hours">GODZINY OTWARCIA</span><i class="fa fa-chevron-down arrow-icon"></i></h6>
+            <div class="content">
+              <p data-translate="monday_friday" class="footer-text">PONIEDZIAŁEK-PIĄTEK 07:00-17:00</p>
+              <p data-translate="saturday" class="footer-text">SOBOTA 09:00-13:00</p>
+              <p data-translate="sunday" class="footer-text">NIEDZIELA NIECZYNNE</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-2">
+            <!-- Kontakt -->
+            <h6 class="footer-heading collapsible" data-target="contact"><span data-translate="contact">KONTAKT</span><i class="fa fa-chevron-down arrow-icon"></i></h6>
+            <div class="content">
+              <p class="footer-text"><i class="fas fa-home mr-3"></i> <span data-translate="street">ul. Leśna 5, 77-100 Bytów</span> </p>
+              <p class="footer-text"><i class="fas fa-envelope mr-3"></i> biuro@gabit.eu</p>
+              <p class="footer-text"><i class="fas fa-phone mr-3"></i> +48 59 822 15 50</p>
+              <p class="footer-text"><i class="fas fa-print mr-3"></i> +48 59 822 15 59</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center p-3" style="background-color: #102E44">
+      <!-- Prawa autorskie -->
+      Copyright © 2024 GABIT
+    </div>
+  </footer>
+
+  <!-- Skrypt JavaScript -->
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
