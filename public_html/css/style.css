@@ -454,3 +454,8 @@ footer {
         margin-left: 20px; 
     }
 }
+@media (max-width: 307px) {
+    .fa-instagram, .fa-linkedin, .fa-youtube {
+        margin-left: 5px; 
+    }
+}
