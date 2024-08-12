@@ -37,10 +37,6 @@ header.hidden {
 
 
 
-
-
-
-
 /* Stylowanie głównego obszaru treści */
 main {
     padding: 20px;
@@ -158,12 +154,6 @@ main {
 
 
 
-
-
-
-
-
-
 /* Stylizacja dla elementu załącznika */
 .attachment-item {
     display: flex;
@@ -205,15 +195,6 @@ main {
     color: #666;
     text-align: left;
 }
-
-
-
-
-
-
-
-
-
 
 
 

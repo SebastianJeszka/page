@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Link z ikoną pliku, otwierający w nowej karcie
             const fileIconLink = document.createElement('a');
             fileIconLink.href = attachment.path;
-            fileIconLink.target = "_blank"; // Otwieranie w nowej karcie
+            fileIconLink.target = "_blank";
 
             const fileIcon = document.createElement('i');
             fileIcon.classList.add('fa', 'fa-file-alt');
@@ -132,7 +132,7 @@ function setLanguage(lang) {
             text.textContent = '';
             break;
     }
-    dropdown.classList.remove('open'); // Zamyka dropdown po zmianie języka
+    dropdown.classList.remove('open');
 
     //Zwijane menu na małych ekranach
     document.querySelectorAll('.collapsible').forEach(item => {
@@ -192,11 +192,11 @@ function toggleContent(id) {
     if (content.classList.contains('hidden-main')) {
         content.classList.remove('hidden-main');
         content.style.maxHeight = content.scrollHeight + "px";
-        button.classList.add('active');  // Dodaje klasę 'active', gdy zawartość jest rozwijana
+        button.classList.add('active');
     } else {
         content.classList.add('hidden-main');
         content.style.maxHeight = null;
-        button.classList.remove('active');  // Usuwa klasę 'active', gdy zawartość jest zwijana
+        button.classList.remove('active');
     }
 }
 
