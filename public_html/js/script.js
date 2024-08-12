@@ -192,13 +192,14 @@ function toggleContent(id) {
     if (content.classList.contains('hidden-main')) {
         content.classList.remove('hidden-main');
         content.style.maxHeight = content.scrollHeight + "px";
-        button.classList.add('active');
+        button.classList.add('active');  // Dodaje klasę 'active', gdy zawartość jest rozwijana
     } else {
         content.classList.add('hidden-main');
         content.style.maxHeight = null;
-        button.classList.remove('active');
+        button.classList.remove('active');  // Usuwa klasę 'active', gdy zawartość jest zwijana
     }
 }
+
 
 
 // Obsługa kliknięć na opcje językowe i zmiana języka
