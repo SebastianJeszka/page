@@ -141,7 +141,7 @@ main {
 /* Stylizacja strzałki */
 .toggle-button-main i {
     transition: transform 0.3s ease, color 0.3s ease;
-    font-size: 14px;
+    font-size: 18px;
     color: #102E44;
 }
 
