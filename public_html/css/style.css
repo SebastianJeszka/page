@@ -279,8 +279,7 @@ main {
 
 /* Stylowanie stopki z gradientem tła */
 footer {
-    background-image: linear-gradient(rgba(16, 46, 68, 0.8), rgba(16, 46, 68, 0.8)), url('../images/gabit.png');
-    /* background-size: cover; */
+    background-image: linear-gradient(rgba(16, 46, 68, 0.8), rgba(16, 46, 68, 0.8)), url('../images/footer-image.png');
     background-position: center;
 }
 

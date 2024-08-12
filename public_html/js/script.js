@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const attachments = [
-        { path: 'images/gabit.png' },
+        { path: 'images/footer-image.png' },
         { path: 'images/okno_tymczasowe.png' }
     ];
 
